@@ -1,0 +1,12 @@
+qtwebrtcendpoint
+ * application creating a gstreamer pipeline which serves as a webrtcendpoint
+ * expects a websocket signaling server
+
+qtwebsocketserver
+ * simple websocket sever relaying messages between two or more clients
+
+webserver
+ * html + js to configure a Chrome browser as a webrtcendpoint
+
+certs
+ * self-signed x509 certificate + private key which can be used during setup of the https and wss server
