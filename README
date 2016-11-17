@@ -10,3 +10,20 @@ webserver
 
 certs
  * self-signed x509 certificate + private key which can be used during setup of the https and wss server
+
+
+How to setup the project:
+ * build the qtwebsocketserver application
+ * run the qtwebsocketserver appliction with '-d -s' (debug and secure)
+   - by default the server will listen on port 1234 (use -p <port> if you hate port 1234)
+   - in the main.cpp the certificate location is hardcoded: /home/lode/keystuff/server.pem and /home/lode/keystuff/server.key
+      --> change and recompile if you have other locations (eg. the certs directory)
+
+ * build the qtwebrtcendpoint application
+ * run the qtwebrtcendpoint application
+   - in the main.cpp the wss url is defined as wss://localhost:1234, you will need to recompile if you want to use another port
+
+ * setup a secure webserver serving the files from the webserver directory
+   - you can use the certificates from the certs directory
+ * browse to the correct file and start the webrtc session
+
