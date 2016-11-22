@@ -13,7 +13,7 @@ function sendMessage(msg) {
 	}
 }
 
-var wsUri =  "wss://localhost:1234"; //"ws://" + window.location.hostname + ":1234";
+var wsUri =  "ws://" + window.location.hostname + ":1234"; // "wss://localhost:1234";
 var websocket = null;
 
 function initWebSocket() {
