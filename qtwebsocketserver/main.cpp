@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     int secure = parser.isSet(secureOption);
     int port = parser.value(portOption).toInt();
 
-    EchoServer *server = new EchoServer(port, debug, secure, QString("/home/lode/keystuff/server.pem"), QString("/home/lode/keystuff/server.key"));
+    EchoServer *server = new EchoServer(port, debug, secure, QString("../certs/server.pem"), QString("../certs/server.key"));
     QObject::connect(server, &EchoServer::closed, &a, &QCoreApplication::quit);
 
     //QString url = (secure == true) ? QString("wss://localhost:1234") : QString("ws://localhost:1234");
